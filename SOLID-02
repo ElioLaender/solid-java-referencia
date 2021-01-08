@@ -1,0 +1,63 @@
+----------------------------------------------------------
+* Single Responsability Principal:
+
+- O princípio da responsabilidade única, garante as as classes tenham um alto nível de coesão
+- Qual é a definição mais formal do princípio de responsabilidade única? Uma classe (ou módulo, função, etc) deve ter um e apenas um motivo para mudar. Esta é uma das definições mais conhecidas do SRP (Single Responsibility Principle).
+
+* Aprendemos:
+
+- Que classes/métodos/funções/módulos devem ter uma única responsabilidade bem definida;
+- Que, segundo o Princípio de Responsabilidade Única (SRP), uma classe deve ter um e apenas um motivo para ser alterada;
+
+----------------------------------------------------------
+* Open Closed Principle: (Uma classe deve estar aberta para extensão, porém fechada para modificação)
+
+- Quando temos uma um método que realiza uma determinada ação, tal como pagamento. Normalmente, conforme muda as modalidades de pagamento como, cartão, boleto, créditos da plataforma, etc. Essas ações possuem diferentes implementações. Para isso, podemos criar várias classes com implementações diferentes, e essas implementações devem seguir o contrato de uma interface de pagamento. E a classe reponsável por pagar, irá chamar o método especificado na interface, sendo assim, podemos ter N implementações de pagamento e essas implementações poderão ser invocadas no mesmo métodos "executor", pois a interface faz com que as implentações partilhem de um mesmo tipo, graças ao polimorfismo. 
+
+* O que podemos fazer para garantir que nosso sistema seja extensível da forma correta?
+- Garantir que cada ação/responsabilidade esteja na classe correta. Esta é uma das formas de garantir que o sistema seja extensível.
+
+* Aprendemos:
+
+- Que cada classe deve conhecer e ser responsável por suas próprias regras de negócio;
+- Que o princípio Aberto/Fechado (OCP) diz que um sistema deve ser aberto para a extensão, mas fechado para a modificação. Isso significa que devemos poder criar novas funcionalidades e estender o sistema sem precisar modificar muitas classes já existentes
+- Uma classe que tende a crescer "para sempre" é uma forte candidata a sofrer alguma espécie de refatoração.
+
+----------------------------------------------------------
+* Liskov Substitution Principle:
+
+* Aprendemos:
+
+- Que, embora a herança favoreça o reaproveitamento de código, ela pode trazer efeitos colaterais quando não utilizada da maneira correta;
+- Que o Princípio de Substituição de Liskov (LSP) diz que devemos poder substituir classes base por suas classes derivadas em qualquer lugar, sem problema. Para tal, uma classe só pode extender de outra, quando todos os atributos e métodos fazem sentido para a mesma. Para não quebrar esse princípio, pode fazer mais sentido utilizar composição. 
+----------------------------------------------------------
+* Interface Segregation Principle:
+
+- Uma classe não deveria ser forçada a depender de métodos que não utilizará. Neste caso, quando temos uma situação onde uma classe precisa implementar um método de uma interface que não faz sentido, uma nova interface deve ser criada, essa nova interface extende a interface inicialmente abordada e adiciona a assinatura de método que faz sentido para uma classe e não para as outras que já implmentavam esta interface. 
+
+Qual a definição do Interface Segregation Principle?
+- Classes não devem ser obrigadas a implementar métodos que não irão precisar. Uma classe não deve ser obrigada a implementar um método de determinada interface, se ele não será útil. Para isso, uma interface deverá ser extraída apenas com os métodos necessários.
+
+----------------------------------------------------------
+* Dependency Inversion Principle:
+
+- Abstrações não devem depender de implementação, a implementação que deve depender da abstração.
+
+Vantagem ao criar dependências com interfaces: Caso uma determinada implementação mude, não seremos afetados, pois dependemos apenas de sua interface. Se um método muda a forma como realiza sua tarefa, desde que a interface se mantenha, não vamos precisar nos preocupar nem em editar o nosso código.
+----------------------------------------------------------
+
+* Aprendemos:
+
+- Que é mais interessante e mais seguro para o nosso código depender de interfaces (classes abstratas, assinaturas de métodos e interfaces em si) do que das implementações de uma classe;
+- Que as interfaces são menos propensas a sofrer mudanças enquanto implementações podem mudar a qualquer momento;
+- Que o Princípio de Inversão de Dependência (DIP) diz que implementações devem depender de abstrações e abstrações não devem depender de implementações;
+- Que as interfaces devem definir apenas os métodos que fazem sentido para seu contexto;
+- Que o Princípio de Segregação de Interfaces (ISP) diz que uma classe não deve ser obrigada a implementar um método que ela não precisa;
+- Os conceitos aprendidos neste treinamento formam o acrônimo SOLID
+	Single Responsibility Principle
+	Open Closed Principle
+	Liskov Substitution Principle
+	Interface Segregation Principle
+	Dependency Inversion Principle 
+
+

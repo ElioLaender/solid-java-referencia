@@ -1,0 +1,24 @@
+* Princípios da Orientação a Objetos
+
+- Coesão: Uma classe que executa bem a sua única tarefa, de forma concisa. 
+
+- Encapsulamento: É uma forma de fazer com que a regra de manipulação dos atributos não fiquem acessível por manipulação direta, ficando as alterações nos valores a cargo de métodos específicos, que farão as devidas validações antes de alterar os valores. É importante resssaltar que o uso de getters e setters não fornecem nenhum tipo e encapsulamento. O fato de criar getters e setters para tudo, na verdade, quebra o encapsulamento da nossa classe.
+Ao encapsular o acesso a determinados dados, liberando acesso apenas ao necessário, os objetos da nossa classe se tornam mais fáceis de serem utilizados. Evitando acoplamentos desnecessários devido a uma classe manupular valores de outra diretamente. 
+
+- Acoplamento: O acoplamento acontece, pois uma classe precisa se comunicar com outra. Porém o acoplamento entre classes deve ser controlado, para evitar que fique muito atraldo, dificultando a manutenção. Uma forma de garantir o desacoplamento, é fazer com que um método chamado em outra classe, resolva o máximo possível de regras que sejam de seu domínio, e a classe que chamou o objeto manipule apenas os valores retornados e que sejam de seu domínio. 
+
+É impossível criar um bom sistema sem nenhum tipo de acoplamento. É fato que, se estamos organizando o nosso código, seguindo as recomendações da orientação a objetos, algum acoplamento acontecerá. Algumas classes precisarão de outras, para que não tenham muitas responsabilidades. Cabe a nós medir quando faz sentido adicionar tal acoplamento com as dependências e como depender do que é seguro, ao invés de classes concretas. Falaremos mais sobre isso neste treinamento.
+----------------------------------------------------------
+* Coesão:
+- Uma classe coesa faz bem uma única coisa
+- Classes coesas não devem ter várias responsabilidades
+
+* Encapsulamento:
+- Getters e setters não são formas eficientes de aplicar encapsulamento
+- É interessante fornecer acesso apenas ao que é necessário em nossas classes
+- O encapsulamento torna o uso das nossas classes mais fácil e intuitivo
+
+* Acoplamento:
+- Acoplamento é a dependência entre classes
+- Acoplamento nem sempre é ruim, e que é impossível criar um sistema sem nenhum acoplamento. Devemos controlar o nível de acoplamento na nossa aplicação.
+-----------------------------------------------------------
